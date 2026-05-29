@@ -1,0 +1,70 @@
+'''WAP TO
+1. Convert "2025-05-17" to "2025/05/17". 
+2. Move all the zeroes to the end in the given list nums=[1,0,2,3,0,17,6]
+3. Reverse a list manually 
+4. Check if a list is sorted
+5. Flatten a nested list'''
+
+#question 1
+a="2025-05-17"
+print("Before: ",a)
+result=""
+for char in a:
+    if char=="-":
+        result+="/"
+    else:
+        result+=char
+print("After: ",result)    
+
+# Question 2  
+num=[1,0,2,3,0,17,6] 
+for i in range (len(num)) :
+    for j in range(i+1,len(num)):
+        if num[i]==0:
+            num[i],num[j]=num[j],num[i]
+for n in num:
+    print(n)     
+
+# Question 3 
+b=[1,2,3,4,5]
+for i in range (len(b)):
+    for j in range(i+1,len(b)):
+        b[i],b[j]=b[j],b[i]
+for l in b:
+    print(l)  
+
+#alt code for que 3
+lst=[1,2,3,4,5]
+rev=[]
+for i in range(len(lst),-1,-1):
+    #print(i)
+    rev.append(i)
+print(rev)
+
+# Question 4 
+#input a list from the user and sort it's elements into ascending order 
+c=[]
+sorted_is=True
+num_in=int(input("Enter the number of elements in the list: "))
+for i in range(num_in):
+    numele= int(input("Enter the element in the list: "))
+    c.append(numele)
+for i in range(len(c)-1):
+    if c[i]>c[i+1]:
+        sorted_is= False
+        break
+if sorted_is == True:
+    print("list is sorted")
+else:
+    print("list is not sorted ")    
+
+#Question 5
+nested = [[1, 2], [3, 4], [5, 6]]
+
+flat = []
+
+for sublist in nested:
+    for item in sublist:
+        flat.append(item)
+
+print(flat)

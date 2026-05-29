@@ -1,0 +1,13 @@
+num=[]
+ele=int(input("Enter the number of elements: "))
+for i in range(ele):
+    n=int(input("Enter the element: "))
+    num.append(n)
+print("The elements in the list are: ",num)
+x=int(input("Enter the number to be searched: "))
+for i in range(len(num)):
+    if num[i]==x:
+        print("The number is found at index: ",i)
+        break
+else:
+    print("The number is not found in the list.")

@@ -1,0 +1,11 @@
+data = {
+    course_data:{
+        course_name:{
+            faculty:"mr xyz",
+            students:{
+                stu_name:credit
+            }
+        }
+    }
+}
+data = {course_data:{course_name:{faculty: " mr xyz",students:{stu_name:credit }}}}
